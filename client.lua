@@ -16,17 +16,16 @@ Citizen.CreateThread(function()
                     BeginTextCommandDisplayHelp('carRentalClose')
                     EndTextCommandDisplayHelp(1, 0, 0, 0)
                     SetFloatingHelpTextWorldPosition(0, v.Pos)
-                    SetFloatingHelpTextStyle()
 
                     if IsControlJustPressed(0, 38) then
                         OpenCarRental(k)
+                        Wait(500)
                     end
                 elseif dist < 5 and not IsPedInAnyVehicle(PlayerPedId()) then
                     letSleep = false
                     BeginTextCommandDisplayHelp('carRental')
                     EndTextCommandDisplayHelp(1, 0, 0, 0)
                     SetFloatingHelpTextWorldPosition(0, v.Pos)
-                    SetFloatingHelpTextStyle()
                 end
             end
         else
@@ -67,6 +66,7 @@ function OpenCarRental(index)
                     lastLocalVehicle = nil
                     FreezeEntityPosition(PlayerPedId(), false)
                     SetEntityInvincible(PlayerPedId(), false)
+                    SetEntityCoords(PlayerPedId(), Config.Points[index].Pos)
                 end
                 SpawnLocalVehicle(vehiclesToRent[vehicleId], Config.Points[index].SpawnPoint)
             end
@@ -96,6 +96,7 @@ function OpenCarRental(index)
                     lastLocalVehicle = nil
                     FreezeEntityPosition(PlayerPedId(), false)
                     SetEntityInvincible(PlayerPedId(), false)
+                    SetEntityCoords(PlayerPedId(), Config.Points[index].Pos)
                 end
                 TriggerServerEvent('sqz_carrental:RentVehicle', vehiclesToRent[vehicleId], insurance, price, Config.RentalTimes[rentalTimeIndex], index)
                 return
@@ -109,6 +110,7 @@ function OpenCarRental(index)
                 lastLocalVehicle = nil
                 FreezeEntityPosition(PlayerPedId(), false)
                 SetEntityInvincible(PlayerPedId(), false)
+                SetEntityCoords(PlayerPedId(), Config.Points[index].Pos)
             end
             return
         end
@@ -216,8 +218,8 @@ function startTimer()
     Citizen.CreateThread(function()
         Citizen.CreateThread(function()
             while rentalTimer>0 do
-                Citizen.Wait(1000)
                 rentalTimer=rentalTimer-1
+                Citizen.Wait(1000)
             end
         end)
         while rentalTimer>0 do
@@ -251,17 +253,16 @@ Citizen.CreateThread(function()
                     BeginTextCommandDisplayHelp('carReturnClose')
                     EndTextCommandDisplayHelp(1, 0, 0, 0)
                     SetFloatingHelpTextWorldPosition(0, v)
-                    SetFloatingHelpTextStyle()
     
                     if IsControlJustPressed(0, 38) then
                         ReturnVehicle()
+                        Wait(2000)
                     end
                 elseif dist < 10 and IsPedInAnyVehicle(PlayerPedId()) then
                     letSleep = false
                     BeginTextCommandDisplayHelp('carReturn')
                     EndTextCommandDisplayHelp(1, 0, 0, 0)
                     SetFloatingHelpTextWorldPosition(0, v)
-                    SetFloatingHelpTextStyle()
                 end
             end
             if letSleep then
@@ -286,7 +287,7 @@ RegisterNetEvent('sqz_carrental:VehicleSuccessfulyReturned')
 AddEventHandler('sqz_carrental:VehicleSuccessfulyReturned', function()
 
     rentalTimer = 0
-    local sec = 10
+    local sec = 3
     local scaleform = RequestScaleformMovie('MP_BIG_MESSAGE_FREEMODE')
 
     for i=1, #returnBlips do
