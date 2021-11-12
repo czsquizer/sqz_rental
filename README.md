@@ -3,10 +3,11 @@
 Advanced vehicle rental system which comes with insurance and custom length for renting any type of vehicle.
 
 # Features
-- Heal when there are no doctors on the server
+- Rent any type of vehicle
 - Optimalization
-- Add money to the job society
-- Leave bed in progress and don't get healed
+- Unlimited delivery/take points
+- Pay insurance (if not paid, you will be charged for damage cause to the vehicle)
+- Choose time you wanna rent the vehicle for
 
 # Instalation
 - Drop the script into your resources folder and start it in your `server.cfg`
