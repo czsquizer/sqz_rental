@@ -1,8 +1,3 @@
-# <center>Quality hosting with preconfigured and DDoS protected cheap FiveM servers. Use link: https://zap-hosting.com/sqzscripts or a code when processing your order: `squizer-8709`.</center>
-[<img src="https://zap-hosting.com/interface/download/images.php?type=affiliate&id=202971">](https://zap-hosting.com/sqzscripts)
-
----
-
 # SQZ_RENTAL SCRIPT
 
 Advanced vehicle rental system which comes with insurance and custom length for renting any type of vehicle.
