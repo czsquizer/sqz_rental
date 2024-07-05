@@ -9,7 +9,7 @@ Advanced vehicle rental system which comes with insurance and custom length for 
 - Pay insurance (if not paid, you will be charged for damage cause to the vehicle)
 - Choose time you wanna rent the vehicle for
 
-# Instalation
+# Installation
 - Drop the script into your resources folder and start it in your `server.cfg`
 - Configure the config, eventualy change the locales and you are done!
 - Yes, thats actually all
