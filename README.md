@@ -2,6 +2,21 @@
 
 Advanced vehicle rental system which comes with insurance and custom length for renting any type of vehicle.
 
+
+<div align="center">
+
+# 🌐 **Host Smarter with Fusiora.com!** 🚀  
+
+<img src="https://fusiora.com/assets/img/branding/content/logo_white.svg" alt="Fusiora Logo" width="400">  
+
+🖥️ **Premium hardware** in **Netherlands**, **Miami**, & **Germany**.  
+🛡️ **DDoS protection** for **any game**.  
+💸 Use **`CODELY`** for **10% OFF**!  
+
+## 🔗 [**Start Hosting Now**](https://fusiora.com)  
+
+</div>
+
 # Features
 - Rent any type of vehicle
 - Optimalization
